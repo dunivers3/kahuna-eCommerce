@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nosifer&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 /* Box Model Hack */
 * {
   box-sizing: border-box;
@@ -22,7 +22,13 @@
   --color-main: #222;
   --color-background: #e3f6f3;
   --color-main-lighter: #1a1a1a;
-  --color-highlight: #088178; }
+  --color-highlight: #088178;
+  --color-background1: #fddde4;
+  --color-background2: #cdebbc;
+  --color-background3: #d1e8f2;
+  --color-background4: #cdd4f8;
+  --color-background5: #f6dbf6;
+  --color-background6: #fff2e5; }
 
 .dark-mode {
   --color-main: #eef5f5;
@@ -68,7 +74,22 @@ p {
   justify-content: space-between;
   padding: 20px 80px;
   background-color: var(--color-background);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); }
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0; }
+  #header .kahunas {
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 1.2rem;
+    text-transform: uppercase;
+    flex-wrap: wrap; }
+    #header .kahunas h2 {
+      font-family: "Nosifer", cursive;
+      font-size: 3rem; }
   #header img {
     width: auto;
     height: 4rem; }
@@ -102,6 +123,7 @@ p {
   width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
+  background-color: var(--color-background);
   padding: 0 80px;
   display: flex;
   flex-direction: column;
@@ -112,7 +134,7 @@ p {
   #homepage h1 {
     color: var(--color-highlight); }
   #homepage button {
-    background-image: url("https://o.remove.bg/downloads/d1769c4f-368a-4790-937a-cd8519baa7dd/Olive_Wood_rustic_board_irregular_shape_800x-removebg-preview.png");
+    background-image: url("../img/note.png");
     background-color: transparent;
     color: var(--color-highlight);
     border: 0;
@@ -120,7 +142,45 @@ p {
     cursor: pointer;
     font-weight: 700;
     font-size: 25px;
-    border-radius: 7px; }
+    border-radius: 7px;
+    background-repeat: no-repeat; }
+
+#feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+  #feature .feature-box {
+    width: 250px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--color-background);
+    border-radius: 4px;
+    margin: 15px 0; }
+    #feature .feature-box:hover {
+      box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1); }
+    #feature .feature-box img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; }
+    #feature .feature-box h6 {
+      display: inline-block;
+      padding: 9px 8px 6px 8px;
+      line-height: 1;
+      border-radius: 4px;
+      color: var(--color-highlight);
+      background-color: var(--color-background1); }
+    #feature .feature-box:nth-child(2) h6 {
+      background-color: var(--color-background2); }
+    #feature .feature-box:nth-child(3) h6 {
+      background-color: var(--color-background3); }
+    #feature .feature-box:nth-child(4) h6 {
+      background-color: var(--color-background4); }
+    #feature .feature-box:nth-child(5) h6 {
+      background-color: var(--color-background5); }
+    #feature .feature-box:nth-child(6) h6 {
+      background-color: var(--color-background6); }
 
 .section-p1 {
   padding: 40px 80px; }
