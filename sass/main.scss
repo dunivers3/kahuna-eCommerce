@@ -38,6 +38,8 @@
 	--color-brandName: #606063;
 	--color-rating: rgb(243, 181, 25);
 	--color-carts: #e8f6ea;
+	--color-white: #fff;
+	--color-promotion: #ef3636;
 }
 
 //colors for dark-mode
@@ -46,6 +48,7 @@
 	--color-background: #111720;
 	--color-main-lighter: #d3d7cf; //darker
 	--color-highlight: #088178;
+	--color-black: #000;
 }
 
 /******************************************
@@ -286,6 +289,31 @@ p {
 				bottom: 20px;
 				right: 10px;
 			}
+		}
+	}
+}
+//banner section
+#banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	background-image: url("../img/fachry.jpg");
+	width: 100%;
+	height: 40vh;
+	background-size: cover;
+	background-position: center;
+	h4 {
+		color: var(--color-white);
+		font-size: 16px;
+	}
+	h2 {
+		color: var(--color-white);
+		font-size: 30px;
+		padding: 10px 0;
+		span {
+			color: var(--color-promotion);
 		}
 	}
 }
