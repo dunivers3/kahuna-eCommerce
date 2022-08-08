@@ -83,7 +83,8 @@ button {
     border-radius: 4px;
     cursor: pointer;
     border: none;
-    outline: none; }
+    outline: none;
+    transition: 0.2s; }
 
 /******************************************
   /* LAYOUT
@@ -284,6 +285,9 @@ button {
       color: var(--color-promotion);
       text-shadow: none;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
+  #banner button:hover {
+    background-color: var(--color-highlight);
+    color: var(--color-white); }
 
 .section-p1 {
   padding: 40px 80px; }

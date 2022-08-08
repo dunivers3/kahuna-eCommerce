@@ -96,6 +96,7 @@ button {
 		cursor: pointer;
 		border: none;
 		outline: none;
+		transition: 0.2s;
 	}
 }
 /******************************************
@@ -339,6 +340,12 @@ button {
 			text-shadow: none;
 			font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
 				sans-serif;
+		}
+	}
+	button {
+		&:hover {
+			background-color: var(--color-highlight);
+			color: var(--color-white);
 		}
 	}
 }
