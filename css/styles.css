@@ -34,7 +34,8 @@
   --color-rating: rgb(243, 181, 25);
   --color-carts: #e8f6ea;
   --color-white: #fff;
-  --color-promotion: #ef3636; }
+  --color-promotion: #ef3636;
+  --color-paragraphs: #465b52; }
 
 .dark-mode {
   --color-main: #eef5f5;
@@ -69,22 +70,20 @@ h6 {
 
 p {
   font-size: 16px;
-  color: #465b52;
+  color: var(--color-paragraphs);
   margin: 15px 0 20px 0; }
 
-button {
-  font-family: "Nosifer", cursive; }
-  button.normal {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 15px 30px;
-    color: var(--color-black);
-    background-color: var(--color-white);
-    border-radius: 4px;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    transition: 0.2s; }
+button.normal {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s; }
 
 /******************************************
   /* LAYOUT
@@ -285,9 +284,36 @@ button {
       color: var(--color-promotion);
       text-shadow: none;
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
-  #banner button:hover {
-    background-color: var(--color-highlight);
-    color: var(--color-white); }
+  #banner button {
+    font-family: "Nosifer", cursive; }
+    #banner button:hover {
+      background-color: var(--color-highlight);
+      color: var(--color-white); }
+
+#call-to-action {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  #call-to-action .banner-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    background-image: url("../img/products/new/zara boots.jpg");
+    min-width: 580px;
+    height: 50vh;
+    background-size: cover;
+    background-position: bottom;
+    padding: 30px; }
+    #call-to-action .banner-box h4 {
+      color: var(--color-white);
+      font-size: 20px;
+      font-weight: 300; }
+    #call-to-action .banner-box h2 a {
+      font-size: 12px;
+      color: var(--color-black);
+      font-weight: lighter;
+      text-decoration: none; }
 
 .section-p1 {
   padding: 40px 80px; }
