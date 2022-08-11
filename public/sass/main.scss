@@ -41,6 +41,13 @@
 	--color-white: #fff;
 	--color-promotion: #ef3636;
 	--color-paragraphs: #465b52;
+	--main-shade: -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main),
+		-1px 1px 0 var(--color-main), 1px 1px 0 var(--color-main);
+	--highlight-shade: -1px -1px 0 var(--color-highlight),
+		1px -1px 0 var(--color-highlight), -1px 1px 0 var(--color-highlight),
+		1px 1px 0 var(--color-highlight);
+	--white-shade: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white),
+		-1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white);
 }
 
 //colors for dark-mode
@@ -345,9 +352,7 @@ button {
 		padding: 10px 0;
 		position: absolute;
 		top: 40px;
-		text-shadow: -1px -1px 0 var(--color-highlight),
-			1px -1px 0 var(--color-highlight), -1px 1px 0 var(--color-highlight),
-			1px 1px 0 var(--color-highlight);
+		text-shadow: var(--highlight-shade);
 		span {
 			color: var(--color-promotion);
 			text-shadow: none;
@@ -363,7 +368,6 @@ button {
 		}
 	}
 }
-
 // call to actions boxes
 #call-to-action {
 	display: flex;
@@ -385,14 +389,13 @@ button {
 			color: var(--color-white);
 			font-size: 20px;
 			font-weight: 300;
+			text-transform: capitalize;
 		}
 		h2 {
 			color: var(--color-white);
 			font-size: 28px;
 			font-weight: 800;
-			text-shadow: -1px -1px 0 var(--color-main),
-				1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main),
-				1px 1px 0 var(--color-main);
+			text-shadow: var(--main-shade);
 
 			span {
 				color: var(--color-highlight);
@@ -412,9 +415,7 @@ button {
 			font-size: 14px;
 			font-weight: 500;
 			padding-bottom: 15px;
-			text-shadow: -1px -1px 0 var(--color-main),
-				1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main),
-				1px 1px 0 var(--color-main);
+			text-shadow: var(--main-shade);
 		}
 		&:hover {
 			button {
@@ -424,28 +425,26 @@ button {
 		}
 	}
 	.banner-box2 {
-		background-image: url("../../img/nike_running1.jpg");
+		background-image: url("../../img/nike_flyknit.jpg");
+		background-position: center;
 		h4 {
 			color: var(--color-main);
 			font-size: 20px;
 			font-weight: 300;
+			text-transform: capitalize;
 		}
 		h2 {
 			color: var(--color-main);
 			font-size: 28px;
 			font-weight: 800;
-			text-shadow: -1px -1px 0 var(--color-white),
-				1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white),
-				1px 1px 0 var(--color-white);
+			text-shadow: var(--white-shade);
 		}
 		span {
 			color: var(--color-main);
 			font-size: 14px;
 			font-weight: 500;
 			padding-bottom: 15px;
-			text-shadow: -1px -1px 0 var(--color-white),
-				1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white),
-				1px 1px 0 var(--color-white);
+			text-shadow: var(--white-shade);
 		}
 		&:hover {
 			button {
@@ -455,6 +454,58 @@ button {
 		}
 	}
 }
+//promotion call-to-action banners
+#promotion-banner {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 0 80px;
+	.banner-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		background-image: url("../../img/nike_runnign.jpg");
+		min-width: 30%;
+		height: 30vh;
+		background-size: cover;
+		background-position: center;
+		padding: 20px;
+		margin-bottom: 20px;
+		h2 {
+			color: var(--color-white);
+			text-shadow: var(--highlight-shade);
+			font-weight: 900;
+			font-size: 22px;
+			text-transform: uppercase;
+		}
+		h3 {
+			color: var(--color-promotion);
+			text-shadow: var(--main-shade);
+			font-size: 15px;
+			font-weight: 800;
+		}
+	}
+	.box2 {
+		background-image: url("../../img/products/new/tommy_hilfinger\ complete\ gear\ men.jpg");
+		h2 {
+			color: var(--color-main-lighter);
+			text-shadow: var(--highlight-shade);
+		}
+		h3 {
+			color: var(--color-promotion);
+			text-shadow: var(--main-shade);
+		}
+	}
+	.box3 {
+		background-image: url("../../img/products/new/tommy_hilfinger\ ladies\ complete\ gear.jpg");
+		h2 {
+			color: var(--color-background1);
+			text-shadow: var(--highlight-shade);
+		}
+	}
+}
+//
 
 .section-p1 {
 	padding: 40px 80px;

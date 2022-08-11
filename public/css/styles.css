@@ -35,7 +35,14 @@
   --color-carts: #e8f6ea;
   --color-white: #fff;
   --color-promotion: #ef3636;
-  --color-paragraphs: #465b52; }
+  --color-paragraphs: #465b52;
+  --main-shade: -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main),
+		-1px 1px 0 var(--color-main), 1px 1px 0 var(--color-main);
+  --highlight-shade: -1px -1px 0 var(--color-highlight),
+		1px -1px 0 var(--color-highlight), -1px 1px 0 var(--color-highlight),
+		1px 1px 0 var(--color-highlight);
+  --white-shade: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white),
+		-1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white); }
 
 .dark-mode {
   --color-main: #eef5f5;
@@ -290,7 +297,7 @@ button.white {
     padding: 10px 0;
     position: absolute;
     top: 40px;
-    text-shadow: -1px -1px 0 var(--color-highlight), 1px -1px 0 var(--color-highlight), -1px 1px 0 var(--color-highlight), 1px 1px 0 var(--color-highlight); }
+    text-shadow: var(--highlight-shade); }
     #banner h2 span {
       color: var(--color-promotion);
       text-shadow: none;
@@ -320,12 +327,13 @@ button.white {
     #call-to-action .banner-box h4 {
       color: var(--color-white);
       font-size: 20px;
-      font-weight: 300; }
+      font-weight: 300;
+      text-transform: capitalize; }
     #call-to-action .banner-box h2 {
       color: var(--color-white);
       font-size: 28px;
       font-weight: 800;
-      text-shadow: -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main), 1px 1px 0 var(--color-main); }
+      text-shadow: var(--main-shade); }
       #call-to-action .banner-box h2 span {
         color: var(--color-highlight);
         font-size: 20px; }
@@ -340,30 +348,74 @@ button.white {
       font-size: 14px;
       font-weight: 500;
       padding-bottom: 15px;
-      text-shadow: -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main), 1px 1px 0 var(--color-main); }
+      text-shadow: var(--main-shade); }
     #call-to-action .banner-box:hover button {
       background: var(--color-highlight);
       border: 1px solid var(--color-highlight); }
   #call-to-action .banner-box2 {
-    background-image: url("../../img/nike_running1.jpg"); }
+    background-image: url("../../img/nike_flyknit.jpg");
+    background-position: center; }
     #call-to-action .banner-box2 h4 {
       color: var(--color-main);
       font-size: 20px;
-      font-weight: 300; }
+      font-weight: 300;
+      text-transform: capitalize; }
     #call-to-action .banner-box2 h2 {
       color: var(--color-main);
       font-size: 28px;
       font-weight: 800;
-      text-shadow: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white); }
+      text-shadow: var(--white-shade); }
     #call-to-action .banner-box2 span {
       color: var(--color-main);
       font-size: 14px;
       font-weight: 500;
       padding-bottom: 15px;
-      text-shadow: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white); }
+      text-shadow: var(--white-shade); }
     #call-to-action .banner-box2:hover button {
       background: var(--color-highlight);
       border: 1px solid var(--color-highlight); }
+
+#promotion-banner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px; }
+  #promotion-banner .banner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("../../img/nike_runnign.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px; }
+    #promotion-banner .banner-box h2 {
+      color: var(--color-white);
+      text-shadow: var(--highlight-shade);
+      font-weight: 900;
+      font-size: 22px;
+      text-transform: uppercase; }
+    #promotion-banner .banner-box h3 {
+      color: var(--color-promotion);
+      text-shadow: var(--main-shade);
+      font-size: 15px;
+      font-weight: 800; }
+  #promotion-banner .box2 {
+    background-image: url("../../img/products/new/tommy_hilfinger complete gear men.jpg"); }
+    #promotion-banner .box2 h2 {
+      color: var(--color-main-lighter);
+      text-shadow: var(--highlight-shade); }
+    #promotion-banner .box2 h3 {
+      color: var(--color-promotion);
+      text-shadow: var(--main-shade); }
+  #promotion-banner .box3 {
+    background-image: url("../../img/products/new/tommy_hilfinger ladies complete gear.jpg"); }
+    #promotion-banner .box3 h2 {
+      color: var(--color-background1);
+      text-shadow: var(--highlight-shade); }
 
 .section-p1 {
   padding: 40px 80px; }
