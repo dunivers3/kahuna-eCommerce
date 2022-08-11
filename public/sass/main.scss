@@ -122,6 +122,10 @@ button {
 		transition: 0.2s;
 	}
 }
+.logo {
+	width: auto;
+	height: 4rem;
+}
 /******************************************
   /* LAYOUT
   /*******************************************/
@@ -143,17 +147,12 @@ button {
 		align-items: flex-end;
 		text-decoration: none;
 		cursor: pointer;
-		gap: 1.2rem;
 		text-transform: uppercase;
 		flex-wrap: wrap;
 		h2 {
 			font-family: "Nosifer", cursive;
 			font-size: 3rem;
 		}
-	}
-	img {
-		width: auto;
-		height: 4rem;
 	}
 	#navbar {
 		display: flex;
@@ -508,6 +507,7 @@ button {
 		}
 	}
 }
+//newsletter
 #newsletter {
 	display: flex;
 	justify-content: space-between;
@@ -554,7 +554,7 @@ button {
 		}
 	}
 }
-//
+//footer
 
 .section-p1 {
 	padding: 40px 80px;
