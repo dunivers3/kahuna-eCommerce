@@ -36,6 +36,9 @@
   --color-white: #fff;
   --color-promotion: #ef3636;
   --color-paragraphs: #465b52;
+  --color-newsletter: #041e42;
+  --color-newsletter-para: #818ea0;
+  --color-offers: #ffbd27;
   --main-shade: -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main),
 		-1px 1px 0 var(--color-main), 1px 1px 0 var(--color-main);
   --highlight-shade: -1px -1px 0 var(--color-highlight),
@@ -416,6 +419,46 @@ button.white {
     #promotion-banner .box3 h2 {
       color: var(--color-background1);
       text-shadow: var(--highlight-shade); }
+
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--color-newsletter);
+  background-image: url("../../img/barrientos.png");
+  background-position: 25% 40%;
+  background-repeat: no-repeat; }
+  #newsletter h4 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-white); }
+  #newsletter p {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-newsletter-para);
+    text-shadow: var(--main-shade); }
+    #newsletter p span {
+      color: var(--color-offers); }
+  #newsletter .form {
+    display: flex;
+    width: 40%; }
+    #newsletter .form input {
+      height: 3.125rem;
+      padding: 0 1.25em;
+      font-size: 14px;
+      width: 100%;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      outline: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0; }
+    #newsletter .form button {
+      background-color: var(--color-highlight);
+      color: var(--color-white);
+      white-space: nowrap;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0; }
 
 .section-p1 {
   padding: 40px 80px; }
