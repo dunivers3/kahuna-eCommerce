@@ -77,7 +77,7 @@ button.normal {
   font-size: 14px;
   font-weight: 600;
   padding: 15px 30px;
-  color: var(--color-black);
+  color: var(--color-main);
   background-color: var(--color-white);
   border-radius: 4px;
   cursor: pointer;
@@ -316,7 +316,7 @@ button.white {
     border-radius: 12px;
     background-size: cover;
     background-position: bottom;
-    padding: 30px; }
+    padding: 14px; }
     #call-to-action .banner-box h4 {
       color: var(--color-white);
       font-size: 20px;
@@ -324,25 +324,46 @@ button.white {
     #call-to-action .banner-box h2 {
       color: var(--color-white);
       font-size: 28px;
-      font-weight: 800px; }
+      font-weight: 800;
+      text-shadow: -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main), 1px 1px 0 var(--color-main); }
       #call-to-action .banner-box h2 span {
         color: var(--color-highlight);
         font-size: 20px; }
       #call-to-action .banner-box h2 a {
         font-size: 12px;
-        color: var(--color-black);
+        color: var(--color-main);
         font-weight: lighter;
+        text-shadow: none;
         text-decoration: none; }
     #call-to-action .banner-box span {
       color: var(--color-white);
       font-size: 14px;
-      font-weight: 500px;
-      padding-bottom: 15px; }
+      font-weight: 500;
+      padding-bottom: 15px;
+      text-shadow: -1px -1px 0 var(--color-main), 1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main), 1px 1px 0 var(--color-main); }
     #call-to-action .banner-box:hover button {
       background: var(--color-highlight);
-      border: 1ps solid var(--color-highlight); }
-    #call-to-action .banner-box .banner-box2 {
-      background-imgage: url("../../img/products/heels.jpg"); }
+      border: 1px solid var(--color-highlight); }
+  #call-to-action .banner-box2 {
+    background-image: url("../../img/nike_running1.jpg"); }
+    #call-to-action .banner-box2 h4 {
+      color: var(--color-main);
+      font-size: 20px;
+      font-weight: 300; }
+    #call-to-action .banner-box2 h2 {
+      color: var(--color-main);
+      font-size: 28px;
+      font-weight: 800;
+      text-shadow: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white); }
+    #call-to-action .banner-box2 span {
+      color: var(--color-main);
+      font-size: 14px;
+      font-weight: 500;
+      padding-bottom: 15px;
+      text-shadow: -1px -1px 0 var(--color-white), 1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white), 1px 1px 0 var(--color-white); }
+    #call-to-action .banner-box2:hover button {
+      background: var(--color-highlight);
+      border: 1px solid var(--color-highlight); }
 
 .section-p1 {
   padding: 40px 80px; }

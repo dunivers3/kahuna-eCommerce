@@ -90,7 +90,7 @@ button {
 		font-size: 14px;
 		font-weight: 600;
 		padding: 15px 30px;
-		color: var(--color-black);
+		color: var(--color-main);
 		background-color: var(--color-white);
 		border-radius: 4px;
 		cursor: pointer;
@@ -380,7 +380,7 @@ button {
 		border-radius: 12px;
 		background-size: cover;
 		background-position: bottom;
-		padding: 30px;
+		padding: 14px;
 		h4 {
 			color: var(--color-white);
 			font-size: 20px;
@@ -389,7 +389,11 @@ button {
 		h2 {
 			color: var(--color-white);
 			font-size: 28px;
-			font-weight: 800px;
+			font-weight: 800;
+			text-shadow: -1px -1px 0 var(--color-main),
+				1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main),
+				1px 1px 0 var(--color-main);
+
 			span {
 				color: var(--color-highlight);
 				font-size: 20px;
@@ -397,25 +401,57 @@ button {
 			//terms and conditions
 			a {
 				font-size: 12px;
-				color: var(--color-black);
+				color: var(--color-main);
 				font-weight: lighter;
+				text-shadow: none;
 				text-decoration: none;
 			}
 		}
 		span {
 			color: var(--color-white);
 			font-size: 14px;
-			font-weight: 500px;
+			font-weight: 500;
 			padding-bottom: 15px;
+			text-shadow: -1px -1px 0 var(--color-main),
+				1px -1px 0 var(--color-main), -1px 1px 0 var(--color-main),
+				1px 1px 0 var(--color-main);
 		}
 		&:hover {
 			button {
 				background: var(--color-highlight);
-				border: 1ps solid var(--color-highlight);
+				border: 1px solid var(--color-highlight);
 			}
 		}
-		.banner-box2 {
-			background-imgage: url("../../img/products/heels.jpg");
+	}
+	.banner-box2 {
+		background-image: url("../../img/nike_running1.jpg");
+		h4 {
+			color: var(--color-main);
+			font-size: 20px;
+			font-weight: 300;
+		}
+		h2 {
+			color: var(--color-main);
+			font-size: 28px;
+			font-weight: 800;
+			text-shadow: -1px -1px 0 var(--color-white),
+				1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white),
+				1px 1px 0 var(--color-white);
+		}
+		span {
+			color: var(--color-main);
+			font-size: 14px;
+			font-weight: 500;
+			padding-bottom: 15px;
+			text-shadow: -1px -1px 0 var(--color-white),
+				1px -1px 0 var(--color-white), -1px 1px 0 var(--color-white),
+				1px 1px 0 var(--color-white);
+		}
+		&:hover {
+			button {
+				background: var(--color-highlight);
+				border: 1px solid var(--color-highlight);
+			}
 		}
 	}
 }
