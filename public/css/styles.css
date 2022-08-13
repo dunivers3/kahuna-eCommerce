@@ -1,22 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Nosifer&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+/******************************************
+  /* GLOBAL STYLES
+  /*******************************************/
 /* Box Model Hack */
 * {
   box-sizing: border-box;
   font-family: "Source Serif Pro", serif;
   margin: 0;
   padding: 0; }
-
-/* Clear fix hack */
-.clearfix:after {
-  content: ".";
-  display: block;
-  clear: both;
-  visibility: hidden;
-  line-height: 0;
-  height: 0; }
-
-.clear {
-  clear: both; }
 
 :root {
   --color-main: #222;
@@ -53,6 +44,12 @@
   --color-main-lighter: #d3d7cf;
   --color-highlight: #088178;
   --color-black: #000; }
+
+.section-p1 {
+  padding: 40px 80px; }
+
+.section-m1 {
+  margin: 40px 0; }
 
 /******************************************
   /* BASE STYLES
@@ -179,9 +176,15 @@ button.white {
   align-items: flex-start;
   justify-content: center; }
   #homepage h4 {
-    padding-bottom: 14px; }
+    padding-bottom: 14px;
+    text-shadow: var(--white-shade); }
+  #homepage h2 {
+    text-shadow: var(--highlight-shade); }
   #homepage h1 {
-    color: var(--color-highlight); }
+    color: var(--color-highlight);
+    text-shadow: var(--main-shade); }
+  #homepage p {
+    text-shadow: var(--white-shade); }
   #homepage button {
     background-image: url("../../img/note.png");
     background-color: transparent;
@@ -200,7 +203,7 @@ button.white {
   justify-content: space-evenly;
   flex-wrap: wrap; }
   #feature .feature-box {
-    width: 250px;
+    width: 180px;
     text-align: center;
     padding: 25px 15px;
     box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
@@ -295,34 +298,27 @@ button.white {
   width: 100%;
   height: 40vh;
   background-size: cover;
-  background-position: center;
-  position: relative; }
+  background-position: center; }
   #banner h4 {
     color: var(--color-white);
-    font-size: 16px;
-    position: absolute;
-    top: 25px; }
+    font-size: 16px; }
   #banner h2 {
     color: var(--color-white);
     font-size: 30px;
     padding: 10px 0;
-    position: absolute;
-    top: 40px;
     text-shadow: var(--highlight-shade); }
     #banner h2 span {
       color: var(--color-promotion);
-      text-shadow: none;
+      text-shadow: var(--white-shade);
       font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; }
-  #banner button {
-    font-family: "Nosifer", cursive; }
-    #banner button:hover {
-      background-color: var(--color-highlight);
-      color: var(--color-white); }
+  #banner button:hover {
+    background-color: var(--color-highlight);
+    color: var(--color-white); }
 
 #call-to-action {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-around; }
   #call-to-action .banner-box {
     display: flex;
     justify-content: center;
@@ -331,10 +327,9 @@ button.white {
     background-image: url("../../img/products/new/zara boots.jpg");
     min-width: 580px;
     height: 50vh;
-    border-radius: 12px;
     background-size: cover;
-    background-position: bottom;
-    padding: 14px; }
+    background-position: center;
+    padding: 30px; }
     #call-to-action .banner-box h4 {
       color: var(--color-white);
       font-size: 20px;
@@ -364,40 +359,27 @@ button.white {
       background: var(--color-highlight);
       border: 1px solid var(--color-highlight); }
   #call-to-action .banner-box2 {
-    background-image: url("../../img/nike_flyknit.jpg");
-    background-position: center; }
+    background-image: url("../../img/nike_flyknit.jpg"); }
     #call-to-action .banner-box2 h4 {
-      color: var(--color-main);
-      font-size: 20px;
-      font-weight: 300;
-      text-transform: capitalize; }
+      color: var(--color-main); }
     #call-to-action .banner-box2 h2 {
       color: var(--color-main);
-      font-size: 28px;
-      font-weight: 800;
       text-shadow: var(--white-shade); }
     #call-to-action .banner-box2 span {
       color: var(--color-main);
-      font-size: 14px;
-      font-weight: 500;
-      padding-bottom: 15px;
       text-shadow: var(--white-shade); }
-    #call-to-action .banner-box2:hover button {
-      background: var(--color-highlight);
-      border: 1px solid var(--color-highlight); }
 
 #promotion-banner {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 0 80px; }
+  flex-wrap: wrap; }
   #promotion-banner .banner-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     background-image: url("../../img/nike_runnign.jpg");
-    min-width: 30%;
+    min-width: 32.666666666666664%;
     height: 30vh;
     background-size: cover;
     background-position: center;
@@ -523,12 +505,6 @@ footer {
     text-align: center;
     color: var(--color-newsletter-para); }
 
-.section-p1 {
-  padding: 40px 80px; }
-
-.section-m1 {
-  margin: 40px 0; }
-
 /******************************************
   /* ADDITIONAL STYLES
   /*******************************************/
@@ -539,6 +515,8 @@ footer {
 /* Cart page */
 /* Start Media Query */
 @media (max-width: 799px) {
+  .section-p1 {
+    padding: 40px 40px; }
   #header #navbar {
     display: flex;
     align-items: flex-start;
@@ -572,4 +550,29 @@ footer {
     #header #mobile i {
       color: var(--color-main-lighter);
       font-size: 24px;
-      padding-left: 20px; } }
+      padding-left: 20px; }
+  #homepage {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%; }
+  #feature {
+    justify-content: center; }
+    #feature .feature-box {
+      margin: 15px 15px; }
+  #product1 .product-cont {
+    justify-content: center; }
+    #product1 .product-cont .prod {
+      margin: 15px; }
+  #banner {
+    height: 20vh; }
+    #banner h2 {
+      top: 22px; }
+  #call-to-action .banner-box {
+    min-width: 100%;
+    height: 30vh;
+    background-position: bottom; }
+  #call-to-action .banner-box2 {
+    background-position: center;
+    margin-top: 5px; }
+  #newsletter .form {
+    width: 70%; } }

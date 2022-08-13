@@ -1,25 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nosifer&family=Source+Serif+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
 
+/******************************************
+  /* GLOBAL STYLES
+  /*******************************************/
+
 /* Box Model Hack */
 * {
 	box-sizing: border-box;
 	font-family: "Source Serif Pro", serif;
 	margin: 0;
 	padding: 0;
-}
-
-/* Clear fix hack */
-.clearfix:after {
-	content: ".";
-	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
-}
-
-.clear {
-	clear: both;
 }
 
 //main color (default)
@@ -61,6 +51,14 @@
 	--color-highlight: #088178;
 	--color-black: #000;
 }
+
+.section-p1 {
+	padding: 40px 80px;
+}
+.section-m1 {
+	margin: 40px 0;
+}
+
 /******************************************
   /* BASE STYLES
   /*******************************************/
@@ -209,9 +207,17 @@ button {
 	justify-content: center;
 	h4 {
 		padding-bottom: 14px;
+		text-shadow: var(--white-shade);
+	}
+	h2 {
+		text-shadow: var(--highlight-shade);
 	}
 	h1 {
 		color: var(--color-highlight);
+		text-shadow: var(--main-shade);
+	}
+	p {
+		text-shadow: var(--white-shade);
 	}
 	button {
 		background-image: url("../../img/note.png");
@@ -233,7 +239,7 @@ button {
 	justify-content: space-evenly;
 	flex-wrap: wrap;
 	.feature-box {
-		width: 250px;
+		width: 180px;
 		text-align: center;
 		padding: 25px 15px;
 		box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
@@ -350,29 +356,28 @@ button {
 	height: 40vh;
 	background-size: cover;
 	background-position: center;
-	position: relative;
+	//position: relative;
 	h4 {
 		color: var(--color-white);
 		font-size: 16px;
-		position: absolute;
-		top: 25px;
+		//position: absolute;
+		//top: 25px;
 	}
 	h2 {
 		color: var(--color-white);
 		font-size: 30px;
 		padding: 10px 0;
-		position: absolute;
-		top: 40px;
+		//position: absolute;
+		//top: 40px;
 		text-shadow: var(--highlight-shade);
 		span {
 			color: var(--color-promotion);
-			text-shadow: none;
+			text-shadow: var(--white-shade);
 			font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
 				sans-serif;
 		}
 	}
 	button {
-		font-family: "Nosifer", cursive;
 		&:hover {
 			background-color: var(--color-highlight);
 			color: var(--color-white);
@@ -383,7 +388,7 @@ button {
 #call-to-action {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	.banner-box {
 		display: flex;
 		justify-content: center;
@@ -392,10 +397,9 @@ button {
 		background-image: url("../../img/products/new/zara\ boots.jpg");
 		min-width: 580px;
 		height: 50vh;
-		border-radius: 12px;
 		background-size: cover;
-		background-position: bottom;
-		padding: 14px;
+		background-position: center;
+		padding: 30px;
 		h4 {
 			color: var(--color-white);
 			font-size: 20px;
@@ -437,31 +441,16 @@ button {
 	}
 	.banner-box2 {
 		background-image: url("../../img/nike_flyknit.jpg");
-		background-position: center;
 		h4 {
 			color: var(--color-main);
-			font-size: 20px;
-			font-weight: 300;
-			text-transform: capitalize;
 		}
 		h2 {
 			color: var(--color-main);
-			font-size: 28px;
-			font-weight: 800;
 			text-shadow: var(--white-shade);
 		}
 		span {
 			color: var(--color-main);
-			font-size: 14px;
-			font-weight: 500;
-			padding-bottom: 15px;
 			text-shadow: var(--white-shade);
-		}
-		&:hover {
-			button {
-				background: var(--color-highlight);
-				border: 1px solid var(--color-highlight);
-			}
 		}
 	}
 }
@@ -470,14 +459,13 @@ button {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	padding: 0 80px;
 	.banner-box {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
 		background-image: url("../../img/nike_runnign.jpg");
-		min-width: 30%;
+		min-width: 32.666666666666664%;
 		height: 30vh;
 		background-size: cover;
 		background-position: center;
@@ -638,13 +626,6 @@ footer {
 	}
 }
 
-.section-p1 {
-	padding: 40px 80px;
-}
-.section-m1 {
-	margin: 40px 0;
-}
-
 /******************************************
   /* ADDITIONAL STYLES
   /*******************************************/
@@ -660,7 +641,11 @@ footer {
 /* Cart page */
 
 /* Start Media Query */
+//for ipad mini (<800px)
 @media (max-width: 799px) {
+	.section-p1 {
+		padding: 40px 40px;
+	}
 	#header {
 		#navbar {
 			display: flex;
@@ -704,4 +689,50 @@ footer {
 			}
 		}
 	}
+	#homepage {
+		height: 70vh;
+		padding: 0 80px;
+		background-position: top 30% right 30%;
+	}
+	#feature {
+		justify-content: center;
+		.feature-box {
+			margin: 15px 15px;
+		}
+	}
+	#product1 {
+		.product-cont {
+			justify-content: center;
+			.prod {
+				margin: 15px;
+			}
+		}
+	}
+	#banner {
+		height: 20vh;
+		h2 {
+			top: 22px;
+		}
+	}
+	#call-to-action {
+		.banner-box {
+			min-width: 100%;
+			height: 30vh;
+			background-position: bottom;
+		}
+		.banner-box2 {
+			background-position: center;
+			margin-top: 5px;
+		}
+	}
+	#newsletter {
+		.form {
+			width: 70%;
+		}
+	}
+}
+
+//for iphone X (<477px)
+@media (max-width: 477px) {
+	//some styles here
 }
