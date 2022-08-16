@@ -525,7 +525,8 @@ footer {
   padding: 14px; }
   #shop-page h2,
   #shop-page p {
-    color: var(--color-background3); }
+    color: var(--color-background3);
+    text-shadow: var(--main-shade); }
 
 #page-navigation {
   text-align: center; }
@@ -627,7 +628,7 @@ footer {
     #feature .feature-box {
       margin: 15px 15px; }
   #product1 .product-cont {
-    justify-content: center; }
+    justify-content: space-around; }
     #product1 .product-cont .prod {
       margin: 15px; }
   #banner {
@@ -685,4 +686,12 @@ footer {
   footer .kahunas h2 {
     font-size: 1.5rem; }
   footer.section-p1 {
-    padding-top: 0; } }
+    padding-top: 0; }
+  #details {
+    display: flex;
+    flex-direction: column; }
+    #details .product-image,
+    #details .product-detail {
+      width: 100%; }
+    #details .product-image {
+      margin-right: 0; } }
