@@ -718,6 +718,14 @@ footer {
 }
 
 /* Blog page */
+#shop-page {
+	&.blog-header {
+		background-image: url("../../img/passion.jpg");
+	}
+}
+#blog {
+	padding: 150px 150px 0 150px;
+}
 
 /* About page */
 
