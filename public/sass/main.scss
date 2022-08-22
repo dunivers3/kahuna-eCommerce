@@ -781,6 +781,30 @@ footer {
 }
 
 /* About page */
+#shop-page {
+	&.about-header {
+		background-image: url("../../img/good_things_inside.jpg");
+		h2,
+		p {
+			color: var(--color-fav-dark);
+			text-shadow: var(--white-shade);
+		}
+		p {
+			color: var(--color-main);
+		}
+	}
+}
+#about-head {
+	display: flex;
+	align-items: center;
+	img {
+		width: 50%;
+		height: auto;
+	}
+	div {
+		padding-left: 40px;
+	}
+}
 
 /* Cart page */
 

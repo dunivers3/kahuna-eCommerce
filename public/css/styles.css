@@ -632,6 +632,24 @@ footer {
       z-index: -9; }
 
 /* About page */
+#shop-page.about-header {
+  background-image: url("../../img/good_things_inside.jpg"); }
+  #shop-page.about-header h2,
+  #shop-page.about-header p {
+    color: var(--color-fav-dark);
+    text-shadow: var(--white-shade); }
+  #shop-page.about-header p {
+    color: var(--color-main); }
+
+#about-head {
+  display: flex;
+  align-items: center; }
+  #about-head img {
+    width: 50%;
+    height: auto; }
+  #about-head div {
+    padding-left: 40px; }
+
 /* Cart page */
 /* Start Media Query */
 @media (max-width: 799px) {
