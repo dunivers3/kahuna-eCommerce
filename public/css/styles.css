@@ -650,9 +650,20 @@ footer {
   #about-head div {
     padding-left: 40px; }
 
+#about-app {
+  text-align: center; }
+  #about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto; }
+    #about-app .video video {
+      width: 100%;
+      height: 100%;
+      border-radius: 20px; }
+
 /* Cart page */
 /* Start Media Query */
-@media (max-width: 799px) {
+@media (max-width: 899px) {
   .section-p1 {
     padding: 40px 40px; }
   #header #navbar {
@@ -713,7 +724,10 @@ footer {
     background-position: center;
     margin-top: 15px; }
   #newsletter .form {
-    width: 70%; } }
+    width: 70%; }
+  /* About Page */
+  #blog {
+    padding: 40px 40px 0 40px; } }
 
 @media (max-width: 477px) {
   .logo {
@@ -778,4 +792,14 @@ footer {
         margin-right: 0px;
         margin-bottom: 30px; }
       #blog .blog-container .blog-peek {
-        width: 100%; } }
+        width: 100%; }
+  /* About page */
+  #about-head {
+    flex-direction: column; }
+    #about-head img {
+      width: 100%;
+      margin-bottom: 20px; }
+    #about-head div {
+      padding-left: 0; }
+  #about-app .video {
+    width: 100%; } }
