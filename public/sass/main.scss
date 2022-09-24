@@ -865,6 +865,11 @@ footer {
 	}
 }
 #form-details {
+	display: flex;
+	justify-content: space-between;
+	margin: 30px;
+	padding: 80px;
+	border: 1px solid var(--color-border-color);
 	form {
 		width: 65%;
 		display: flex;
@@ -894,6 +899,8 @@ footer {
 	.members {
 		div {
 			padding-bottom: 25px;
+			display: flex;
+			align-items: flex-start;
 			img {
 				width: 65px;
 				height: 65px;
@@ -1012,6 +1019,14 @@ footer {
 	/* About Page */
 	#blog {
 		padding: 40px 40px 0 40px;
+	}
+
+	/* Contact Page */
+	#form-details{
+		padding: 40px;
+		form{
+			width: 50%;
+		}
 	}
 }
 
@@ -1136,6 +1151,28 @@ footer {
 	#about-app {
 		.video {
 			width: 100%;
+		}
+	}
+
+	/* Contact Page */
+	#contact-details{
+		flex-direction: column;
+		.details,
+		.map{
+			width: 100%;
+		}
+		.details{
+			margin-bottom: 30px;
+		}
+	}
+	#form-details{
+		margin: 10px;
+		padding: 30px 10px;
+		flex-wrap: wrap;
+		form,
+		.members{
+			width: 100%;
+			margin-bottom: 30px;
 		}
 	}
 }

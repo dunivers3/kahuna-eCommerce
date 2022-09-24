@@ -52,7 +52,7 @@ npm run test
 
 👤 **duncan**
 
--   Website: www.duniverseinc.com
+-   Website: www.duniverse.me
 -   Twitter: [@\_duniverse](https://twitter.com/_duniverse)
 -   Github: [@dunivers3](https://github.com/dunivers3)
 -   LinkedIn: [@duniverse](https://linkedin.com/in/duniverse)
